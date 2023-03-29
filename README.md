@@ -1,6 +1,6 @@
 ## !!! ISSUE !!!!
 
-Any files using `getServerSideProps` will fail once hosted, returning a 500 error. This repo is currently in state to help resolve these issues. 
+Any files using `getServerSideProps` will fail once hosted, returning a 500 error. This repo is currently not in a state that it will deploy successfully on firebase with out the issue. 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
