@@ -1,4 +1,4 @@
-## CRITICAL ISSUE !!!!
+## !!! ISSUE !!!!
 
 Any files using `getServerSideProps` will fail once hosted, returning a 500 error. This repo is currently in state to help resolve these issues. 
 
