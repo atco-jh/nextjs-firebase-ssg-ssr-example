@@ -33,5 +33,5 @@ module.exports = {
   },
   trailingSlash: false,
   reactStrictMode: true,
-  distDir: "next",
+  distDir: ".next",
 };
