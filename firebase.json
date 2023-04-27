@@ -1,57 +1,28 @@
 {
-  "hosting": {
-    "source": ".",
-    "cleanUrls": true,
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "functions/"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "function": "nextjsFunc"
-      },
-      {
-        "source": "**/**",
-        "function": "nextjsFunc"
-      }
-    ],
-    "headers": [
-      {
-        "source": "**",
+    "hosting": {
+        "source": ".",
+        "cleanUrls": true,
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "functions/"],
+        "rewrites": [
+            {
+                "source": "**",
+                "function": "nextjsFunc"
+            },
+            {
+                "source": "**/**",
+                "function": "nextjsFunc"
+            }
+        ],
         "headers": [
-          {
-            "key": "Strict-Transport-Security",
-            "value": "max-age=63072000; includeSubDomains; preload"
-          }
+            {
+                "source": "**",
+                "headers": [
+                    {
+                        "key": "Strict-Transport-Security",
+                        "value": "max-age=63072000; includeSubDomains; preload"
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  },
-   "functions": {
-    "source": "functions",
-    "predeploy": [
-      "npm --prefix \"$PROJECT_DIR\" install",
-      "npm --prefix \"$PROJECT_DIR\" run build"
-    ],
-    "runtime": "nodejs16",
-        "ignore": [
-      "firebase.json",
-			"firebase-debug.log",
-			"**/.*",
-			"**/node_modules/**",
-      ".vscode",
-      ".yarn",
-      "docs/**",
-      "pipeline/**",
-			"public/**",
-      "src/**",
-      "styles/**",  
-      "README copy.md",
-			"README.md"
-    ]
-  }
-  
+    }
 }
